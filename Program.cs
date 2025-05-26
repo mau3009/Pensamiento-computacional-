@@ -1,33 +1,42 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
-Random generador = new Random();
-int aleatorio = generador.Next(0,51);
-int intento;
-bool acertado = false;
-Console.WriteLine("Adivina el número entre 0 y 50");
-
-while (!acertado)
+/*Ejercicio 1*/
+/*int edad;
+do
 {
-    Console.WriteLine("Introduce un número: ");
-    if (int.TryParse(Console.ReadLine(), out intento))
+    Console.WriteLine("Ingrese su edad: ");
+    edad=Convert.ToInt32(Console.ReadLine());
+    if (edad < 1)
     {
-        if (intento == aleatorio)
-        {
-            Console.WriteLine("Haz adivinado el número");
-            acertado = true;
-        }
-        else if (intento < aleatorio)
-        {
-            Console.WriteLine("El número es mayor, intentalo de nuevo");
-        }
-        else if (intento > aleatorio)
-        {
-            Console.WriteLine("El número es menor, intentalo de nuevo");
-        }
+        Console.WriteLine ("La edad es menor");
+    }
+    else if (edad > 100)
+    {
+        Console.WriteLine("La edad es mayor de 100");
     }
     else 
     {
-        Console.WriteLine("No es un número, Ingresa un valor númerico entre 0 a 50.");
+        Console.WriteLine("La edad esta en el rango");
     }
+} while (true);
+*/
 
-}
+
+
+/*Ejercicio 2*/
+/*int numero;
+
+do
+{
+    Console.WriteLine("Ingrese un numero entero");
+    numero = Convert.ToInt32(Console.ReadLine());
+
+   for (int actual = 1; actual <= 10; actual++)
+   {
+    Console.WriteLine(numero * actual );
+    Console.WriteLine("La tabla del numero: " + numero);
+   }
+} while (true);
+*/
