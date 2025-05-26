@@ -1,0 +1,23 @@
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Bienvenido");
+Console.WriteLine("Ingresa tu nombre completo");
+String nombre; 
+nombre = Console.ReadLine();
+Console.WriteLine("Su nombre completo es: " + nombre);
+Console.WriteLine("Ingrese su altura en metros");
+decimal altura;
+altura=Convert.ToDecimal(Console.ReadLine());
+Console.WriteLine("Su altura es de: " + altura);
+Console.WriteLine("Ingrese su edad");
+int edad;
+edad = Convert.ToInt16(Console.ReadLine());
+Console.WriteLine("Su edad es: " + edad);
+Console.WriteLine("Ingrese la incicial de su mascota");
+char mascota;
+mascota = Convert.ToChar (Console.ReadLine());
+Console.WriteLine("La inicial de su mascota es: " + mascota);
+Console.WriteLine("Todos los datos son:");
+Console.WriteLine(nombre);
+Console.WriteLine(altura);
+Console.WriteLine(edad);
+Console.WriteLine(mascota);
