@@ -1,21 +1,33 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using System.Diagnostics;
 
-Console.WriteLine("Hola");
-Console.WriteLine("Ingrese una hora del día");
+Random generador = new Random();
+int aleatorio = generador.Next(0,51);
+int intento;
+bool acertado = false;
+Console.WriteLine("Adivina el número entre 0 y 50");
 
-if (int.TryParse(Console.ReadLine(), out int hora) && hora >= 0 && hora <= 23)
+while (!acertado)
 {
-    if (hora >=0 && hora <=11)
+    Console.WriteLine("Introduce un número: ");
+    if (int.TryParse(Console.ReadLine(), out intento))
     {
-        Console.WriteLine("Buenos días");
+        if (intento == aleatorio)
+        {
+            Console.WriteLine("Haz adivinado el número");
+            acertado = true;
+        }
+        else if (intento < aleatorio)
+        {
+            Console.WriteLine("El número es mayor, intentalo de nuevo");
+        }
+        else if (intento > aleatorio)
+        {
+            Console.WriteLine("El número es menor, intentalo de nuevo");
+        }
     }
-    else if (hora >= 12 && hora <= 18)
+    else 
     {
-        Console.WriteLine("Buenas tardes");
+        Console.WriteLine("No es un número, Ingresa un valor númerico entre 0 a 50.");
     }
-    else if  (hora >= 19 && hora <=23)
-    {
-        Console.WriteLine("Buenas noches");
-    }
+
 }
