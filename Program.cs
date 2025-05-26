@@ -1,42 +1,21 @@
-﻿
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+﻿// See https://aka.ms/new-console-template for more information
+using System.Diagnostics;
 
-/*Ejercicio 1*/
-/*int edad;
-do
+Console.WriteLine("Hola");
+Console.WriteLine("Ingrese una hora del día");
+
+if (int.TryParse(Console.ReadLine(), out int hora) && hora >= 0 && hora <= 23)
 {
-    Console.WriteLine("Ingrese su edad: ");
-    edad=Convert.ToInt32(Console.ReadLine());
-    if (edad < 1)
+    if (hora >=0 && hora <=11)
     {
-        Console.WriteLine ("La edad es menor");
+        Console.WriteLine("Buenos días");
     }
-    else if (edad > 100)
+    else if (hora >= 12 && hora <= 18)
     {
-        Console.WriteLine("La edad es mayor de 100");
+        Console.WriteLine("Buenas tardes");
     }
-    else 
+    else if  (hora >= 19 && hora <=23)
     {
-        Console.WriteLine("La edad esta en el rango");
+        Console.WriteLine("Buenas noches");
     }
-} while (true);
-*/
-
-
-
-/*Ejercicio 2*/
-/*int numero;
-
-do
-{
-    Console.WriteLine("Ingrese un numero entero");
-    numero = Convert.ToInt32(Console.ReadLine());
-
-   for (int actual = 1; actual <= 10; actual++)
-   {
-    Console.WriteLine(numero * actual );
-    Console.WriteLine("La tabla del numero: " + numero);
-   }
-} while (true);
-*/
+}
